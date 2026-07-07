@@ -34,7 +34,7 @@ func (p *NethostProvider) Schema(ctx context.Context, req provider.SchemaRequest
 		Attributes: map[string]schema.Attribute{
 			"endpoint": schema.StringAttribute{
 				Required:    true,
-				Description: "The URL endpoint for the Nethost API.",
+				Description: "The base URL of the Nethost API host.",
 			},
 			"api_key": schema.StringAttribute{
 				Optional:    true,

@@ -11,7 +11,7 @@ Terraform provider for the Nethost API.
 
 ```hcl
 provider "nethost" {
-  endpoint = "https://klient-api-46qvm.nethost.cz/api/v3"
+  endpoint = "https://klient-api-46qvm.nethost.cz"
   api_key  = var.nethost_api_key
 }
 ```

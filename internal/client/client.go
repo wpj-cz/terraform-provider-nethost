@@ -12,6 +12,8 @@ import (
 	"time"
 )
 
+const apiBasePath = "/api/v3"
+
 type Client struct {
 	endpoint   string
 	apiKey     string
@@ -20,7 +22,7 @@ type Client struct {
 
 func NewClient(endpoint string, apiKey string) *Client {
 	return &Client{
-		endpoint: strings.TrimRight(endpoint, "/"),
+		endpoint: strings.TrimRight(endpoint, "/") + apiBasePath,
 		apiKey:   apiKey,
 		httpClient: &http.Client{
 			Timeout: 30 * time.Second,

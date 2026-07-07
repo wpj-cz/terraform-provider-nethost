@@ -10,12 +10,12 @@ The nethost provider manages services exposed by the Nethost API, including `ssl
 
 ```hcl
 provider "nethost" {
-  endpoint = "https://klient-api-46qvm.nethost.cz/api/v3"
+  endpoint = "https://klient-api-46qvm.nethost.cz"
   api_key  = var.nethost_api_key
 }
 ```
 
 ## Argument Reference
 
-* `endpoint` - (Required) The URL endpoint for the Nethost API.
+* `endpoint` - (Required) The base URL of the Nethost API host.
 * `api_key` - (Optional) The API key for Nethost authentication. If omitted, the provider also reads `NETHOST_API_KEY` or `API_KEY` from the environment.
